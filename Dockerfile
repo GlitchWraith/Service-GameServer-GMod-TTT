@@ -1,6 +1,6 @@
 FROM ghostlink/service-gameserver-gmod:latest
 
-ENV collection=1780079141
+ENV collection=2035305813
 
 ARG steamAPIKey
 
