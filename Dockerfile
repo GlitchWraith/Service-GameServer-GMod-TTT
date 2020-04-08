@@ -17,6 +17,8 @@ RUN /home/steam/buildWorkAround.sh $collection $steamAPIKey
 # Rerun to prevent IO Errors
 RUN /home/steam/buildWorkAround.sh $collection $steamAPIKey
 
+COPY config.txt ../Server1/garrysmod/data/mapvote/config.txt 
+
 ENV map = ttt_lego
 ENV liveAPIKey = Nothing
 ENTRYPOINT [ "/bin/bash", "-c", "/home/steam/Server1/srcds_run -game garrysmod +maxplayers 12 +map $map +gamemode terrortown -console +host_workshop_collection $collection -authkey $liveAPIKey -debug" ]
