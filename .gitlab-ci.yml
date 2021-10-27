@@ -6,7 +6,7 @@ default:
 build_image:
   script:
     - docker build -t service-gameserver-gmod-ttt:latest .
-    - docker tag service-gameserver-gmod-ttt2:latest $docker_hub_user/service-gameserver-gmod-ttt:latest
+    - docker tag service-gameserver-gmod-ttt:latest $docker_hub_user/service-gameserver-gmod-ttt:latest
     - docker login -u $docker_hub_user -p $docker_hub_api
     - docker push $docker_hub_user/service-gameserver-gmod-ttt:latest
     - docker image rm service-gameserver-gmod-ttt:latest
